@@ -1,16 +1,20 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 STATUS = ((0, "Draft"), (1, "Published"))
 
-
-LIKE_CHOICES =(
+LIKE_CHOICES = (
     ('Like', 'Like'),
     ('Unlike', 'Unlike')
 )
 
-# creat your models here.
+# Define the Diet model first
+class Diet(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -18,6 +22,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
+    diet = models.ForeignKey(Diet, on_delete=models.CASCADE, related_name="posts", null=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -45,7 +50,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
-
 
 
 class Like(models.Model):

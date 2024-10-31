@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Post, Comment,Like
+from .models import Post, Comment,Like, Diet
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
@@ -11,7 +11,11 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
 
+class DietAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
 
 # Register your models here.
 admin.site.register(Comment)
 admin.site.register(Like)
+admin.site.register(Diet, DietAdmin)
