@@ -170,3 +170,10 @@ body {
     text-transform: capitalize; /* Capitalize the first letter of each word */
     margin: 5px 0; /* Vertical spacing around the diet name */
 }
+
+
+/* about hero picture */
+
+.profile-image{
+    width: 75%;
+}
