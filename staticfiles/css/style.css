@@ -55,9 +55,9 @@ body {
     color: white;
     margin: 4px;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 2px 4px; /* Optional: adds some padding around the text */
-    border-radius: 3px; /* Optional: rounds the corners */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 4px;
+    border-radius: 3px;
 }
 
 .masthead {
@@ -88,9 +88,9 @@ body {
     height: 100%;
     width: 150%;
     background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
+
     transform: skew(15deg);
+
     z-index: 100;
 }
 
@@ -162,18 +162,120 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
 .diet-name {
-    font-family: 'Arial', sans-serif; /* Use a clean, readable font */
-    font-weight: bold; /* Make the text bold */
-    color: #E84610; /* A distinctive color, e.g., a shade of red/orange */
-    font-size: 1.2rem; /* Slightly larger font size for emphasis */
-    text-transform: capitalize; /* Capitalize the first letter of each word */
-    margin: 5px 0; /* Vertical spacing around the diet name */
+    font-family: 'Arial', sans-serif;
+
+    font-weight: bold;
+
+    color: #E84610;
+
+    font-size: 1.2rem;
+
+    text-transform: capitalize;
+  
+    margin: 5px 0;
+
 }
 
 
 /* about hero picture */
 
-.profile-image{
+.profile-image {
     width: 75%;
+}
+
+.hero-div {
+    background: url('/static/images/heropic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+#inner-hero {
+    background-color: hsla(325, 12%, 31%, 0.692);
+    padding: 100px;
+    font-weight: 700;
+}
+
+#welcome-head {
+    background-color: #F7B733;
+    color: white;
+    border-radius: 10%;
+    width: 50%;
+    margin: auto;
+}
+
+#learnMoreBtn {
+    border: 2px solid #F7B733;
+}
+
+a #learnMoreBtn {
+    text-decoration: none;
+    color: #F7B733;
+}
+
+/* New styles for post cards */
+.post-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content styling inside post card */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Footer styling inside post card */
+.card-footer {
+    background-color: #f8f9fa;
+    font-size: 0.85rem;
+    color: #777;
+    padding: 10px;
+}
+
+/* Pagination styling */
+.pagination .page-link {
+    color: #E84610;
+    font-weight: bold;
+    border: none;
+}
+
+.pagination .page-link:hover {
+    color: #333;
+    background-color: #f2f2f2;
+}
+
+.about-hero-section {
+    background: url('/static/images/aboutd.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50vh; 
+}
+
+
+.about-us {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #a72e2e;
+    margin-bottom: 20px; /* Adds spacing below the title */
+    margin-top: 20px; /* Adds spacing above the title */
 }
