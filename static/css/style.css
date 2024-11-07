@@ -279,3 +279,22 @@ a #learnMoreBtn {
     margin-bottom: 20px; /* Adds spacing below the title */
     margin-top: 20px; /* Adds spacing above the title */
 }
+
+form {
+    background-color: transparent; /* Remove any background color */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove shadow */
+}
+
+form input, form textarea {
+    width: 100%; /* Ensure fields take up the full width */
+    margin-bottom: 15px; /* Add space between fields */
+}
+
+form button {
+    width: 100px; /* Adjust button width as needed */
+}
+
+.contact-us {
+    min-height: 70vh;
+}
