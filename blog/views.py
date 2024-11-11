@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
+from django.http import JsonResponse
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Post
+from .models import Post, Like
 from .forms import CommentForm
 
 # Create your views here.
@@ -52,3 +54,25 @@ def post_detail(request, slug):
         "comment_form": comment_form,
         },
         )
+
+@login_required
+def toggle_like(request, post_id):
+    """
+    Toggle like or unlike on a specific post for the logged-in user.
+    """
+    post = get_object_or_404(Post, id=post_id)
+    like, created = Like.objects.get_or_create(user=request.user, post=post)
+
+    if not created:
+        # If the like already exists, delete it (unlike the post)
+        like.delete()
+        liked = False
+    else:
+        # If the like does not exist, create it (like the post)
+        liked = True
+
+    # Calculate total likes for the post
+    total_likes = post.likes.count()
+
+    # Return the new like status and total likes as JSON (for AJAX use)
+    return JsonResponse({'liked': liked, 'total_likes': total_likes})  
