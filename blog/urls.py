@@ -1,8 +1,9 @@
-from . import views
 from django.urls import path
+from . import views
+
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
-    path('post/<slug:slug>/', views.post_detail, name='post_detail'),
-    path('post/<int:post_id>/toggle_like/', views.toggle_like, name='toggle_like'),
+    path('<slug:slug>/', views.post_detail, name='post_detail'),
+    path('post/<slug:slug>', views.PostLike.as_view(), name='post_like'),
 ]

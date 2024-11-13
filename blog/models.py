@@ -28,12 +28,16 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+    # Adding the 'liked_by' field to keep track of users who liked this post
 
     class Meta:
         ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
+
+    def number_of_likes(self):
+        return self.likes.count()
 
 
 class Comment(models.Model):
@@ -51,24 +55,18 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
 
-
 class Like(models.Model):
     """
     Stores a single like entry related to :model:`auth.User`
     and :model:`blog.Post`.
     """
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='likes'
-    )
-    post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name='likes'
-    )
-    value = models.CharField(
-        choices=LIKE_CHOICES, default='Like', max_length=10
-    )
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    value = models.CharField(choices=LIKE_CHOICES, default='Like', max_length=10)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         unique_together = ('user', 'post')  # Ensure a user can only like a post once
 
     def __str__(self):
-        return f"{self.user} {'likes' if self.value == 'Like' else 'dislikes'} {self.post.title}"
+        return f"{self.user.username} liked {self.post.title}"

@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <!-- Like/Dislike and Comment Section with Line -->
+    <!-- Like and Comment Section -->
     <div class="row align-items-center mt-3">
         <div class="col-auto">
             <strong class="text-secondary">
@@ -36,20 +36,29 @@
             </strong>
         </div>
 
+        <!-- Like Button Section -->
         <div class="col-auto">
-            <form action="{% url 'toggle_like' post.id %}" method="post">
-                {% csrf_token %}
-                <button id="like-button" class="btn {% if user in post.likes.all %}btn-primary{% else %}btn-outline-primary{% endif %}">
-                    <i class="fa fa-thumbs-up"></i>
-                </button>
-
-                <button id="dislike-button" class="btn btn-outline-primary ms-2">
-                    <i class="fa fa-thumbs-down"></i>
-                </button>
-            </form>
+            {% if user.is_authenticated %}
+                <form action="{% url 'post_like' post.slug %}" method="POST" class="d-inline">
+                    {% csrf_token %}
+                    {% if user_liked %}
+                        <!-- If the user has liked the post -->
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-heart"></i> Unlike
+                        </button>
+                    {% else %}
+                        <!-- If the user has not liked the post -->
+                        <button type="submit" class="btn btn-outline-primary">
+                            <i class="far fa-heart"></i> Like
+                        </button>
+                    {% endif %}
+                </form>
+            {% else %}
+                <span class="text-secondary"><i class="far fa-heart"></i> Like</span>
+            {% endif %}
+            <!-- Display number of likes -->
+            <span class="text-secondary">{{ like_count }}</span>
         </div>
-    </div>
-
     <!-- Separator Line -->
     <hr>
 
