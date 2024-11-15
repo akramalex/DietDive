@@ -26,27 +26,33 @@ def post_detail(request, slug):
     comment_count = post.comments.filter(approved=True).count()
 
     # Check if the user has liked the post
-    user_liked = Like.objects.filter(user=request.user, post=post, value='Like').exists()
+    if request.user.is_authenticated:  # Only check likes if the user is logged in
+        user_liked = Like.objects.filter(user=request.user, post=post, value='Like').exists()
+    else:
+        user_liked = False  # If not logged in, user has not liked the post
 
     # Get the like count
     like_count = Like.objects.filter(post=post, value='Like').count()
 
     # Handle comment form
     if request.method == "POST":
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.author = request.user
-            comment.post = post
-            comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
-            )
+        if request.user.is_authenticated:
+            comment_form = CommentForm(data=request.POST)
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.author = request.user
+                comment.post = post
+                comment.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'Comment submitted and awaiting approval'
+                )
+        else:
+            messages.add_message(request, messages.ERROR, 'You need to be logged in to comment!')
+
     else:
         comment_form = CommentForm()
 
-    # Pass like-related data to template
     return render(request, "blog/post_detail.html", {
         "post": post,
         "comments": comments,
