@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
 from django.views import generic, View
 from django.contrib.auth.decorators import login_required
@@ -47,6 +47,7 @@ def post_detail(request, slug):
                     request, messages.SUCCESS,
                     'Comment submitted and awaiting approval'
                 )
+                return redirect('post_detail', slug=slug)
         else:
             messages.add_message(request, messages.ERROR, 'You need to be logged in to comment!')
 

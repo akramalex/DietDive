@@ -250,7 +250,17 @@ a #learnMoreBtn {
     color: #777;
     padding: 10px;
 }
-
+    /* Ensure the links and icons remain white */
+    .icon-link {
+        color: white; /* Override default blue link color */
+        text-decoration: none; /* Remove underline for links */
+    }
+    .icon-link:hover {
+        color: #ccc; /* Optional: Change color on hover */
+    }
+    .icon-link i {
+        font-size: 1.5rem; /* Adjust size of the icons if needed */
+    }
 /* Pagination styling */
 .pagination .page-link {
     color: #E84610;
