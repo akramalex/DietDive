@@ -32,7 +32,7 @@
                     <div class="image-container">
                         <a href="{% url 'post_detail' post.slug %}">
                         {% if "placeholder" in post.featured_image.url %}
-                        <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                        <img class="card-img-top" src="{% static 'images/main.jpg' %}"
                             alt="placeholder image">
                         {% else %}
                         <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
