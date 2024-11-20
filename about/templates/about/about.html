@@ -10,10 +10,10 @@
     <div class="row justify-content-center">
         <div class="col-10 col-md-8 text-center">
             {% if "placeholder" in about.profile_image.url %}
-      <img src="{% static 'images/default.jpg' %}" width="75%"
+      <img src="{% static 'images/default.jpg' %}" class="profile-image"
         alt="placeholder image" >
       {% else %}
-      <img src="{{ about.profile_image.url }}" width="75%"
+      <img src="{{ about.profile_image.url }}" class="profile-image"
         alt="{{ about.title }}">
       {% endif %}
             <h1 class="about-us">About Us</h1> <!-- "About Us" title below the hero image -->
