@@ -16,12 +16,12 @@
       <img src="{{ about.profile_image.url }}" class="profile-image"
         alt="{{ about.title }}">
       {% endif %}
-      <article>
+      
             <h1 class="about-us">About Us</h1> <!-- "About Us" title below the hero image -->
             <h2>{{ about.title }}</h2>
-            <p>{{ about.content | safe }}</p>
+            <article>{{ about.content | safe }}</article>
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-          </article>
+          
         </div>
     </div>
 </div>
