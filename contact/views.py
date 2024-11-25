@@ -11,7 +11,7 @@ def contact_view(request):
             return redirect('contact_success')  # Redirect to the success view
         else:
             # If form is invalid, send an error message
-            messages.error(request, "The form is invalid. Please try again.")
+            messages.error(request, "There was an error processing your request. Please try again.")
             return render(request, 'contact/contact.html', {'form': form})  # Render the form again with error    
     else:
         form = ContactForm()
