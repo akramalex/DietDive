@@ -309,3 +309,10 @@ form button {
     min-height: 70vh;
 }
 
+
+
+input[type="checkbox"] {
+    display: inline-block;/* Reset top margin */
+    width: 25px;
+    
+}
