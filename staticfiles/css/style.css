@@ -182,7 +182,8 @@ body {
 /* about hero picture */
 
 .profile-image {
-    width: 75%;
+    width: 30%;
+    height: 30%;
 }
 
 .hero-div {
