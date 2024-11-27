@@ -26,8 +26,9 @@ def post_detail(request, slug):
     comment_count = post.comments.filter(approved=True).count()
 
     # Check if the user has liked the post
-    if request.user.is_authenticated:  # Only check likes if the user is logged in
-        user_liked = Like.objects.filter(user=request.user, post=post, value='Like').exists()
+    if request.user.is_authenticated:
+        user_liked = Like.objects.filter(
+            user=request.user, post=post, value='Like').exists()
     else:
         user_liked = False  # If not logged in, user has not liked the post
 
@@ -49,7 +50,8 @@ def post_detail(request, slug):
                 )
                 return redirect('post_detail', slug=slug)
         else:
-            messages.add_message(request, messages.ERROR, 'You need to be logged in to comment!')
+            messages.add_message(
+                request, messages.ERROR, 'You need to be logged to comment!')
 
     else:
         comment_form = CommentForm()
@@ -62,6 +64,7 @@ def post_detail(request, slug):
         "user_liked": user_liked,
         "like_count": like_count,
     })
+
 
 def comment_edit(request, slug, comment_id):
     """
@@ -81,9 +84,10 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))    
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
 def comment_delete(request, slug, comment_id):
@@ -96,9 +100,11 @@ def comment_delete(request, slug, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.add_message(
+            request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 

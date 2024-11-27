@@ -10,6 +10,8 @@ LIKE_CHOICES = (
 )
 
 # Define the Diet model first
+
+
 class Diet(models.Model):
     name = models.CharField(max_length=50, unique=True)
 
@@ -24,7 +26,8 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     featured_image = CloudinaryField('image', default='placeholder')
-    diet = models.ForeignKey(Diet, on_delete=models.CASCADE, related_name="posts", null=True)
+    diet = models.ForeignKey(
+        Diet, on_delete=models.CASCADE, related_name="posts", null=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -57,6 +60,7 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
 
+
 class Like(models.Model):
     """
     Stores a single like entry related to :model:`auth.User`
@@ -64,11 +68,12 @@ class Like(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    value = models.CharField(choices=LIKE_CHOICES, default='Like', max_length=10)
+    value = models.CharField(
+        choices=LIKE_CHOICES, default='Like', max_length=10)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('user', 'post')  # Ensure a user can only like a post once
+        unique_together = ('user', 'post')
 
     def __str__(self):
         return f"{self.user.username} liked {self.post.title}"
