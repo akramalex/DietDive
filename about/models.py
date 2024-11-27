@@ -1,7 +1,14 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
+""" Create your models here.
+
+This module defines the `About` model for the `About` page.
+It includes fields for the title, profile image,
+content, and the date when it was last updated.
+"""
+
+
 class About(models.Model):
     title = models.CharField(max_length=200)
     profile_image = CloudinaryField('image', default='placeholder')

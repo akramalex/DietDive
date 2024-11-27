@@ -9,7 +9,9 @@ LIKE_CHOICES = (
     ('Unlike', 'Unlike')
 )
 
-# Define the Diet model first
+""" Define the Diet model first
+ Diet model stores different types of diets, and Post model
+ represents blog posts related to those diets."""
 
 
 class Diet(models.Model):

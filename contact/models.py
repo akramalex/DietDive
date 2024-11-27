@@ -1,6 +1,10 @@
 from django.db import models
 
-# Create your models here.
+""" Create your models here.
+
+ Model to store contact form submissions,
+ including name, email, message, and read status"""
+
 
 class Contact(models.Model):
     name = models.CharField(max_length=100)

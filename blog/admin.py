@@ -2,6 +2,12 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Comment, Diet, Like
 
+"""
+This module registers the models for the Django Admin interface.
+It includes custom configurations for the `Post`,
+`Comment`, `Like`, and `Diet` models.
+"""
+
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
