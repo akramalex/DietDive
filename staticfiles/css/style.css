@@ -187,7 +187,7 @@ body {
 }
 
 .hero-div {
-    background: url('/static/images/hero.jpg') no-repeat center center fixed;
+    background: url('/static/images/her.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(70vh - 50px);
     color: #555;
