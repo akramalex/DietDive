@@ -9,8 +9,8 @@
                 <p>Explore the world of nutrition and wellness, one diet at a time with DietDive</p>
                 <p>Your guide to understanding diets and unlocking a healthier lifestyle.!</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="{% url 'about' %}" class="btn bsb-btn-3xl btn-outline-light" id="learnMoreBtn">Learn
-                        More</a>
+                    <a href="{% url 'about' %}" class="btn bsb-btn-3xl btn-outline-light" id="learnMoreBtn">Learn about
+                        DietDive and our mission</a>
                 </div>
             </div>
         </div>
@@ -19,59 +19,58 @@
 
 <!-- index.html content starts here -->
 
-    <div class="row justify-content-center">
-        <h2 class="text-center lat-po mb-4">LATEST POSTS</h2>
-    </div>
+<div class="row justify-content-center">
+    <h2 class="text-center lat-po mb-4">LATEST POSTS</h2>
+</div>
 
-    <div class="row">
-        {% for post in post_list %}
-        <div class="col-md-4 mb-4"> <!-- Each post occupies half the row width on medium and larger screens -->
-            <div class="card post-card shadow-sm">
-                <!-- Content Section -->
-                <div class="card-body">
-                    <div class="image-container">
-                        <a href="{% url 'post_detail' post.slug %}">
+<div class="row">
+    {% for post in post_list %}
+    <div class="col-md-4 mb-4"> <!-- Each post occupies half the row width on medium and larger screens -->
+        <div class="card post-card shadow-sm">
+            <!-- Content Section -->
+            <div class="card-body">
+                <div class="image-container">
+                    <a href="{% url 'post_detail' post.slug %}">
                         {% if "placeholder" in post.featured_image.url %}
-                        <img class="card-img-top" src="{% static 'images/main.jpg' %}"
-                            alt="placeholder image">
+                        <img class="card-img-top" src="{% static 'images/main.jpg' %}" alt="placeholder image">
                         {% else %}
                         <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                         {% endif %}
                     </a>
-                    </div>
-                    <p class="diet-name">Diet: {{ post.diet.name }}</p>
-                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                        <h3 class="card-title">{{ post.title }}</h3>
-                    </a>
-                    <p class="card-text">{{ post.excerpt }}</p>
                 </div>
+                <p class="diet-name">Diet: {{ post.diet.name }}</p>
+                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                    <h3 class="card-title">{{ post.title }}</h3>
+                </a>
+                <p class="card-text">{{ post.excerpt }}</p>
+            </div>
 
-                <!-- Footer Section -->
-                <div class="card-footer text-muted d-flex justify-content-between">
-                    <span>Author: {{ post.author }}</span>
-                    <span>{{ post.created_on }}</span>
-                </div>
+            <!-- Footer Section -->
+            <div class="card-footer text-muted d-flex justify-content-between">
+                <span>Author: {{ post.author }}</span>
+                <span>{{ post.created_on }}</span>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 
-    {% if is_paginated %}
-    <nav aria-label="Page navigation" class="mt-4">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li class="page-item">
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
-            </li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li class="page-item">
-                <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
-            </li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+{% if is_paginated %}
+<nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+        </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 
 
 <!-- index.html content ends here -->
