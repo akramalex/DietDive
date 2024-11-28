@@ -324,3 +324,89 @@ input[type="checkbox"] {
     margin-top: 10px;
 }
 
+
+
+/* Media Query for screens smaller than 768px (tablets and phones) */
+@media (max-width: 1500px) {
+    /* Adjust the width and padding for the hero content */
+    .hero-div {
+        padding-left: 10px; /* Adjust padding */
+        padding-right: 10px; /* Adjust padding */
+        
+    }
+
+    #welcome-head {
+        width: 100%;
+    }
+
+    #hero-content {
+        padding-top: 20px; /* Adjust top padding */
+        padding-bottom: 20px; /* Adjust bottom padding */
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    #inner-hero {
+        padding: 20px; /* Padding inside the hero content */
+        margin: 0 auto; /* Center it */
+    }
+
+    #welcome-head {
+        font-size: 2.5rem; /* Smaller font size for welcome message */
+        margin-bottom: 15px;
+    }
+
+    /* Ensure button adjusts well on smaller screens */
+    .hero-div .btn {
+        font-size: 1rem; /* Slightly smaller font */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    /* Adjust the Learn More button alignment */
+    .hero-div .d-grid {
+        margin-top: 10px;
+    }
+
+    .profile-image {
+        display: none;
+    }
+}
+
+
+
+/* Media Query for screens smaller than 576px (smaller phones) */
+@media (max-width: 576px) {
+    .hero-div {
+        padding-left: 5px; /* Adjust padding for very small screens */
+        padding-right: 5px;
+    }
+
+    #welcome-head{
+        width: 100%;
+    }
+
+    #hero-content {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #inner-hero {
+        padding: 10px; /* Smaller padding for smaller devices */
+    }
+
+    #welcome-head {
+        font-size: 2rem; /* Even smaller font size for very small screens */
+        margin-bottom: 10px;
+    }
+
+    /* Further adjust button size and padding */
+    .hero-div .btn {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 8px 12px; /* Adjust padding */
+    }
+
+    .profile-image {
+        display: none;
+    }
+
+}
