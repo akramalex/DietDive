@@ -228,7 +228,17 @@ They can be found below:
 
 
 
-#### Typography:
+#### Surface
+
+#### Color Scheme: 
+
+I used the following Image to generate the following color scheme on [coolers](https://coolors.co/).co. The resultant color scheme was:
+
+![](static/images/cs.jpg)
+
+
+##### Typography:
+
 
  * Lato:
 
@@ -238,6 +248,206 @@ They can be found below:
 * Roboto:
 
      Used for: Body text and general content to provide readability and clarity.
+
+
+
+## Features
+
+The following features have been implemented:
+
+* Fully responsive website consisting of:
+* Home (the blog)
+* About
+* Contact
+* Login
+* Logout
+* Register
+* Blog Detail - with CRUD functionality for logged in users to like a post and/or comment on a post (comments can be edited or deleted)
+
+* Blog Admin - with CRUD functionality for logged in superadministrators
+
+### Site Navigation
+
+### Navbar
+
+* Featured at the top of the page, the navigation shows the DietDive the left corner. For smaller devices. 
+
+* The other navigation links are: Home, About, Contact , Register,  and LogiLogout which link to different pages of the site.
+
+* The active page which the user is currently on is underlinedH.
+
+* When the user hovers over a link, the link is in bold.
+
+* The navigation makes clear the name of the company and website.
+
+* The navigation makes the different sections of information easy to find.
+
+* On smaller devices the navigation converts to a burger menu
+
+![](static/images/nav.jpg)
+![](static/images/nav-l.jpg)
+![](static/images/nav-s.jpg)
+
+### Homepage
+
+* The homepage consists of a large hero image. Here the user is welcomed to the blog and provided a short blub about the site.
+
+* The 'learn about Diet Dive and our mission' button takes the user to the 'About' page.
+
+* below the hero section is all of the blog posts. The posts are displayed in 3 columns, with 6 posts per page.
+
+* Each post is in a bootstrap card, with the post's: dietname, title, author, excerpt, date created and feature image.
+
+* On smaller devices the layout changes to one column per post to maximise usable screen space.
+
+* The next button takes the user to the next 6 blog posts (pagination)
+
+* The user can click on the blog post's title/excerpt/image to take them to that post's post detail page. Here they can view the whole post.
+
+       
+![](static/images/home-2.jpg)
+![](static/images/home-3.jpg)
+
+
+
+### Blog
+
+
+* Each blog post can be clicked - bringing the user to the blog details page for that post.
+
+* The header section contains the blog title, feature image, author and date the post was created.
+
+* The blog post is rendered to the page for the user to read.
+
+* Below the post is a like button and a comment sections. These features are read-only for non-logged in users. Logged in users can like or comment on the post.
+
+* For non-logged-in users, a login button is provided with a link that directs them to the sign-in/sign-up page, allowing them to comment and like posts once they are authenticated.
+
+* Clicking the heart icon likes the post. Users can click on the heart again to unlike the post.
+
+* The number of likes and comments for that particular blog post is clearly visible.
+
+* Logged in users can write a comment using the comment form and submit it to the DB. It must be approved by an administrator in order to appear on the front end.
+
+* A logged in user can edit or delete their own comment. Editing a comment will resubmit the new comment to the DB for approval.
+
+
+![](static/images/blog-1.jpg)
+![](static/images/blog-2.jpg)
+![](static/images/blog-3.jpg)
+![](static/images/blog-4.jpg)
+![](static/images/blog-5.jpg)
+![](static/images/blog-6.jpg)
+![](static/images/blog-7.jpg)
+
+
+
+### About page 
+
+* The About page is a simple page to inform site users all about DietDive.
+
+* It consists of about content, an image, and the date edited (from the about DB table).
+
+* The contents of the about page can be edited with a UI from the admin area.
+
+![](static/images/about-1.jpg)
+![](static/images/about-2.jpg)
+![](static/images/about-3.jpg)
+
+### Contact Page
+
+* The Contact page consists of a form a user can use to get in touch with DietDive.
+
+* Front end validation code ensures users must fill out all fields in order to submit the contact form.
+
+* Once the user submits a message, they are shown a confirmation message stating: 'Thank you! Your message has been submitted successfully. We will get back to you shortly.' Below the message, a button is provided to redirect users back to the homepage.
+
+
+
+* I also ensured that any required elements removed from the front-end trigger an error message stating, "there was an error . Please try again."
+
+![](static/images/c1.jpg)
+
+
+![](static/images/c2.jpg)
+![](static/images/c3.jpg)
+
+
+
+
+### login, logout, register 
+
+
+* Users can register for an account by filling out the registration form.
+
+* This form is validated on the front end so that users must submit required 
+  information.
+
+* Passwords rules apply:
+  - Your password can’t be too similar to your other personal information.
+  - Your password must contain at least 8 characters.
+  - Your password can’t be a commonly used password.
+  - Your password can’t be entirely numeric.
+  - The password must be entered twice and the 2 passwords must match.
+
+
+* Clicking the sign up button will create a new user and the user can then sign in and use the user functionality on the website.
+
+* Users can login from the login page. They must enter the correct username and password.
+
+* User can easily log out by clicking the logout button in the navigation bar.
+
+
+![](static/images/reg1.jpg)
+
+
+![](static/images/reg2.jpg)
+![](static/images/reg3.jpg)
+![](static/images/l1.jpg)
+![](static/images/l2.jpg)
+
+
+
+
+### Footer
+* The footer is simple with a navigation menu and social links.
+
+![](static/images/footer.jpg)
+
+
+
+
+
+## Unresolved bugs
+
+* There are no other unresolved bugs that I am aware of.
+
+## Future Features/Improvements
+
+ * User Profile
+
+   - Ability to post blogs.
+   - Option to save blogs to a favorites list.
+   - Ability to update profile image.
+
+* sign up 
+
+  - Email verification upon registration for security.
+  
+  - Account verification for added user authentication.
+
+
+
+###  Database Design
+
+Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
+
+
+Below is the database structure:
+
+![](static/images/data-b.jpg)
+
+
 
 
 ## Testing 
