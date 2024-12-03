@@ -418,9 +418,6 @@ The following features have been implemented:
 
 
 
-## Unresolved bugs
-
-* There are no other unresolved bugs that I am aware of.
 
 ## Future Features/Improvements
 
@@ -517,6 +514,8 @@ Below is the database structure:
 
 ## Testing 
 
+I have included testing details during and post-development in a separate document called [TESTING.md](https://github.com/akramalex/DietDive/blob/main/TESTING.md).
+
 
 * I tested that this page works in different browsers: Chrome, Firefox, Safari, Internet Explorer.
 
@@ -534,7 +533,10 @@ Below is the database structure:
   
  * I discovered that this was because I had used the wrong file paths, even though they were supposed to be relative.
  
+  
+### Unresolved bugs
 
+* There are no other unresolved bugs that I am aware of.
 
 ## validator Testing
  * HTML
