@@ -437,11 +437,76 @@ The following features have been implemented:
   - Account verification for added user authentication.
 
 
+## Agile Development Process
+
+[GitHub Projects](https://github.com/users/akramalex/projects/11) served as an 
+Agile tool for this project.
+
+
+ - The dietDive project was managed from the beginning using GitHub Projects (View Project Here), in order to ensure an agile approach.
+
+ - The project goals were broken into Epics, each further divided into User Stories.
+ ![](static/images/ag3.jpg)
+ ![](static/images/ag4.jpg)
+ ![](static/images/ag5.jpg)
+
+
+ ### MoSCoW Prioritisation
+I've decomposed my Epics into stories prior to prioritizing and implementing them. Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
+
+ * Must Have: guaranteed to be delivered
+
+ * Should Have: adds significant value, but not vital
+
+ * Could Have: has small impact if left out
+
+ ![](static/images/ag1.jpg)
+![](static/images/ag2.jpg)
+
+## Technologies used
+
+
+* Python
+
+   - he packages installed for the is project can be found in the [requirements.txt](https://github.com/akramalex/DietDive/blob/main/requirements.txt)
+* Django
+  - Django was used as the python framework in the project.
+  - Django all auth was used to handle user authentication and related tasks i.e. sign in, sign up, sign out.
+
+
+* Heroku
+  - Used to deploy the page and make it publicly available.
+
+
+* [dbs](https://dbs.ci-dbs.net/)
+   - Used for the database during development and in deployment.
+
+
+* HTML
+  - HTML was the base language used to layout the skeleton of all templates.
+* CSS
+ - Custom CSS used to style the page and make the appearance look a little 
+  more unique.
+
+* Javascript
+  - I have used Javascript throughout to handle comments , edit and delete 
+
+
+* Bootstrap 5.1.3
+  - Used to style HTML, CSS, minor javascript. The more I used this framework the most I realized retrospectively how it could have saved me writing several parts of the code I had already written.
+
+* Font awesome
+  - All icons throughout the page.
+
+* favicon
+
+   - The favicon is used to enhance the branding and user experience by providing a recognizable icon in the browser tab, making it easier for users to identify the website when multiple tabs are open.
 
 ###  Database Design
 
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
 
+Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
+To follow best practice, a database schema was created for the backend DB and tables, and mapped out before coding began using a free version of [Lucidchart](https://lucid.app/) .
 
 Below is the database structure:
 
