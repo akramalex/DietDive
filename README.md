@@ -225,7 +225,15 @@ They can be found below:
 
 ![](static/images/ss-2.jpg)
 
+###  Database Design
 
+
+Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
+To follow best practice, a database schema was created for the backend DB and tables, and mapped out before coding began using a free version of [Lucidchart](https://lucid.app/) .
+
+Below is the database structure:
+
+![](static/images/data-b.jpg)
 
 
 #### Surface
@@ -499,15 +507,7 @@ I've decomposed my Epics into stories prior to prioritizing and implementing the
 
    - The favicon is used to enhance the branding and user experience by providing a recognizable icon in the browser tab, making it easier for users to identify the website when multiple tabs are open.
 
-###  Database Design
 
-
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
-To follow best practice, a database schema was created for the backend DB and tables, and mapped out before coding began using a free version of [Lucidchart](https://lucid.app/) .
-
-Below is the database structure:
-
-![](static/images/data-b.jpg)
 
 
 
