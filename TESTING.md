@@ -2,6 +2,14 @@
 
 Return back to the [README.md](https://github.com/akramalex/DietDive/blob/main/README.md) file.
 
+* I tested that this page works in different browsers: Chrome, Firefox, Safari, Internet Explorer.
+
+* I confirmed that this project is responsive, looks good, and functions on all standard screen sizes using devtools and the device toolbar.
+
+* I confirmed that the navigation header, "About Us," "Sign Up," and "Contact" text are all readable and easy to understand.
+
+* I have confirmed that the form works, requires entries in every field, and will only accept an email in the email field.
+
 ## Code Validation 
 
 ### HTML 

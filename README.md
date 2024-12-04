@@ -517,13 +517,7 @@ I've decomposed my Epics into stories prior to prioritizing and implementing the
 I have included testing details during and post-development in a separate document called [TESTING.md](https://github.com/akramalex/DietDive/blob/main/TESTING.md).
 
 
-* I tested that this page works in different browsers: Chrome, Firefox, Safari, Internet Explorer.
 
-* I confirmed that this project is responsive, looks good, and functions on all standard screen sizes using devtools and the device toolbar.
-
-* I confirmed that the navigation header, "About Us," "Sign Up," and "Contact" text are all readable and easy to understand.
-
-* I have confirmed that the form works, requires entries in every field, and will only accept an email in the email field.
 
 
 ## bugs
