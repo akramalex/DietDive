@@ -30,45 +30,45 @@ To maintain the integrity of the platform, all comments undergo verification and
 
   ### The Strategy
   
-  #### Site  Aims & Goals
+  #### Site  Aims
   
    Provide Comprehensive Information on Various Diet Plans
 
-  - Aim: To educate users on a wide range of diet plans, including their benefits, challenges, and suitability for different lifestyles.
+  -  To educate users on a wide range of diet plans, including their benefits, challenges, and suitability for different lifestyles.
 
-   - Goal: Help users make informed decisions about diet and wellness by offering detailed, evidence-based content on diets like Mediterranean, Intermittent Fasting, Vegan, DASH, and more.
+   -  Help users make informed decisions about diet and wellness by offering detailed, evidence-based content on diets like Mediterranean, Intermittent Fasting, Vegan, DASH, and more.
    User Interaction and Engagement
 
-  - Aim: To allow users to engage with the content through comments and likes, creating a community of people interested in health and wellness.
+  -  To allow users to engage with the content through comments and likes, creating a community of people interested in health and wellness.
 
-  - Goal: Enhance user interaction by enabling the comment and like features on blog posts, allowing users to share their thoughts, experiences, and recommendations.
+  -  Enhance user interaction by enabling the comment and like features on blog posts, allowing users to share their thoughts, experiences, and recommendations.
   Facilitate a Personalized Experience
 
 
 
-  - Aim: To create a platform that encourages healthy living by promoting knowledge on diets, nutrition, and fitness.
+  -  To create a platform that encourages healthy living by promoting knowledge on diets, nutrition, and fitness.
 
- - Goal: Drive awareness about the importance of a balanced diet, and inspire users to explore different dietary approaches that can contribute to a healthier lifestyle.
+ -  Drive awareness about the importance of a balanced diet, and inspire users to explore different dietary approaches that can contribute to a healthier lifestyle.
 Provide a User-Friendly and Accessible Platform
 
- - Aim: To ensure that users have a seamless, intuitive experience on the website, regardless of their device (mobile, tablet, desktop).
+ -  To ensure that users have a seamless, intuitive experience on the website, regardless of their device (mobile, tablet, desktop).
 
- - Goal: Design DietDive with responsive layouts, clear navigation, and an 
+ -  Design DietDive with responsive layouts, clear navigation, and an 
    easy-to-use interface to enhance usability and make content accessible to a diverse audience.
 
 
 
- - Aim: To foster a supportive community of health-conscious individuals who can share experiences, ask questions, and offer support to others on their diet journeys.
+ -  To foster a supportive community of health-conscious individuals who can share experiences, ask questions, and offer support to others on their diet journeys.
 
- - Goal: Engage users with a space to connect, learn from others, and share 
+ -  Engage users with a space to connect, learn from others, and share 
   advice. DietDive can become a community-driven platform that offers both expert opinions and user-generated content.
   Support Content Creation and Community Contributions
 
 
 
- - Aim: To improve visibility and ranking on search engines like Google.
+ -  To improve visibility and ranking on search engines like Google.
 
-- Goal: Implement SEO best practices, ensuring the website is easily discoverable by users searching for diet and wellness content. This includes optimizing blog posts, images, and page titles for SEO.
+ -  Implement SEO best practices, ensuring the website is easily discoverable by users searching for diet and wellness content. This includes optimizing blog posts, images, and page titles for SEO.
 
 
 
