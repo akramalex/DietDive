@@ -59,3 +59,154 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 I have used the recommended [JShint Validator](https://jshint.com/) to validate all of my JS files.
 
 ![](static/images/js.jpg)
+
+
+
+### Python  
+
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/#) to validate all of my Python files.
+
+####  manage.py 
+
+![](static/images/mang.jpg)
+
+#### settings.py 
+
+![](static/images/set.jpg)
+
+
+#### Blog
+
+ * admin.py 
+
+ ![](static/images/blog-admin.jpg)
+
+ * apps.py
+
+![](static/images/blog-apps.jpg)
+
+* forms.py
+
+![](static/images/blog-forms.jpg)
+
+* models.py 
+
+![](static/images/blog-models.jpg)
+
+* url.py
+
+![](static/images/blog-url.jpg)
+
+* view.py
+
+![](static/images/blog-view.jpg)
+
+
+#### About
+ 
+
+ * admin.py 
+
+ ![](static/images/about-admin.jpg)
+
+ * apps.py
+
+![](static/images/about-apps.jpg)
+
+
+
+* models.py 
+
+![](static/images/about-models.jpg)
+
+* url.py
+
+![](static/images/about-url.jpg)
+
+* view.py
+
+![](static/images/about-view.jpg)
+
+
+#### Contact
+ 
+
+ * admin.py 
+
+ ![](static/images/contact-admin.jpg)
+
+ * apps.py
+
+![](static/images/contact-app.jpg)
+
+
+
+* models.py 
+
+![](static/images/contact-models.jpg)
+
+* url.py
+
+![](static/images/contact-url.jpg)
+
+* view.py
+
+![](static/images/contact-view.jpg)
+
+ 
+
+ ### lighthouse 
+
+  * Home 
+
+  ![](static/images/l-home.jpg)
+
+* About
+
+![](static/images/l-about.jpg)
+
+* Contact
+
+![](static/images/l-contact.jpg)
+
+* Register 
+
+![](static/images/l-register.jpg)
+
+* Sign in 
+
+![](static/images/ls.jpg)
+
+
+* Mobile  light house 
+
+   - Home 
+
+  ![](static/images/lm-home.jpg)
+
+   -  About
+
+
+   ![](static/images/lm-about.jpg)
+
+
+   -  Contact
+
+   ![](static/images/lm-contact.jpg)
+
+
+
+  -  Register 
+
+
+
+  ![](static/images/lm-register.jpg)
+
+
+
+  -  Sign in 
+
+
+
+  ![](static/images/lm-s.jpg)
+
