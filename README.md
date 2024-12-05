@@ -520,56 +520,180 @@ I have included testing details during and post-development in a separate docume
 
 
 
-## bugs
-### Solved bugs 
- 
- * When I deployed my project to GitHub Pages, I discovered that it was broken. The links to other files, specifically images, did not work. 
-  
- * I discovered that this was because I had used the wrong file paths, even though they were supposed to be relative.
- 
-  
-### Unresolved bugs
-
-* There are no other unresolved bugs that I am aware of.
-
-## validator Testing
- * HTML
-  
-  * No errors were returned when passing through the official W3C validator.
-
-* CSS 
-  
-    - No errors were found when passing through the official (jigsaw) validator.
-
-* Accessibility 
-  
-      - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through Lighthouse in DevTools
-      
-![](assets/images/light-house.png)
-
-## Unfixed Bugs
-
-No unfixed bugs were identified.
-
-
 ## Deployment 
 
-* The Site was deployed to GitHub pages. The Steps to deploy are as follows:
-  
-  - In the GitHub repository. navigate to the setting tab.
 
-  - From the source section drop-down menu, select the Master Branch.
 
-  * Once the master branch has been selected, the page provides the link to the completed website.
-  
-  The live link can be found here- [ Coding Club ](https://akramalex.github.io/Portfolio1/)
+
+The live deployed application can be found deployed on [Heroku](https://id.heroku.com/login).
+
+
+ ### dbs Database
+
+This project uses [dbs](https://dbs.ci-dbs.net/)  for the PostgreSQL Database.
+
+1: Provide  Email Address#
+2: Create  PostgreSQL Database
+
+3: Get the Database URL
+
+### Cloudinary API
+This project uses the [Cloudinary API](https://console.cloudinary.com/settings/c-54e56b1299a77e8b55f6dcb16bacf1/api-keys) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+
+To obtain your own Cloudinary API key, create an account and log in.
+
+  - For Primary interest, you can choose Programmable Media for image and video API.
+ - -Optional: edit your assigned cloud name to something more memorable.
+ - On your Cloudinary Dashboard, you can copy your API Environment Variable.
+ - Be sure to remove the CLOUDINARY_URL= as part of the API value; this is the key.
+
+ ###  Heroku Deployment
+
+This project uses [Heroku](https://id.heroku.com/login)
+, a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+ * Select New in the top-right corner of your Heroku Dashboard, and select Create new app from the dropdown menu.
+* Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select Create App.
+* From the new app Settings, click Reveal Config Vars, and set your environment variables.
+
+
+Heroku needs two additional files in order to deploy properly.
+
+* requirements.txt
+* Procfile
+
+
+You can install this project's requirements (where applicable) using:
+
+ * pip3 install -r requirements.txt
+ If you have your own packages that have been installed, then the requirements file needs updated using:
+
+ * pip3 freeze --local > requirements.txt
+The Procfile can be created with the following command:
+
+ * echo web: gunicorn app_name.wsgi > Procfile
+ * replace app_name with the name of your primary Django app name; the folder where settings.py is located
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+
+ * Select Automatic Deployment from the Heroku app.
+Or:
+
+ * In the Terminal/CLI, connect to Heroku using this command: heroku login -i
+ * Set the remote for Heroku: heroku git:remote -a app_name (replace app_name with your app name)
+* After performing the standard Git add, commit, and push to GitHub, you can now type:
+    - git push heroku main
+    
+The project should now be connected and deployed to Heroku!
+
+### Local Deployment 
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the requirements.txt file.
+
+You will need to create a new file called env.py at the root-level, and include the same environment variables listed above from the Heroku deployment steps.
+
+Sample env.py file:
+
+import os
+
+os.environ.setdefault(
+    "DATABASE_URL", "postgres://##)
+os.environ.setdefault("SECRET_KEY", "##")
+
+os.environ.setdefault(
+    "CLOUDINARY_URL", "cloudinary://##")
+
+    
+ local environment only (do not include these in production/deployment!)
+Setting.py("DEBUG", "True")
+
+
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps: 
+
+
+- Start the Django app: python3 manage.py runserver
+- Stop the app once it's loaded: CTRL+C or ⌘+C (Mac)
+- Make any necessary migrations: python3 manage.py makemigrations
+- Migrate the data to the database: python3 manage.py migrate
+- Create a superuser: python3 manage.py createsuperuser
+- Load fixtures (if applicable): python3 manage.py loaddata file-name.json (repeat for each file)
+- Everything should be ready now, so run the Django app again: python3 manage.py runserver
+
+
+### Cloning on a Local machine or Via Gitpod Terminal
+
+*  Navigate to the [GitHub repository](https://github.com/akramalex/DietDive)
+
+ 
+
+* Open Gitpod
+ 
+    In the GitHub repository, click on the green Gitpod button, or use the following link to open the repository in Gitpod directly:
+
+
+https://gitpod.io/#https://github.com/akramalex/DietDive
+
+* Set Up the Gitpod Workspace
+
+  Gitpod will automatically set up a workspace for you, which includes cloning the repository and installing the necessary dependencies.
+
+* Install Required Dependencies
+  In Gitpod, open the terminal and run the following command to install the required Python dependencies:
+
+pip install -r requirements.txt
+
+
+* Configure the Database
+  -  In Gitpod, you can either connect to a local database or use an external PostgreSQL database. Follow the provided instructions to configure the database.
+
+* Run Migrations
+  - After setting up the database, run the following command to apply the database migrations and create the necessary tables:
+
+    python manage.py migrate
+* Run the Development Server
+  - You can now run the Django development server in Gitpod by executing the following command:
+
+
+python manage.py runserver
+Access the Application
+Gitpod will provide a publicly accessible URL to view your application in the cloud. After starting the server, the URL will look like this:
+[DietDive](https://8000-akramalex-dietdive-9xwmeslqna3.ws.codeinstitute-ide.net)
+
+
+
+
 
 
   ## Credits
 
+
+   - [Balsamiq](https://balsamiq.cloud/) was used to create the wireframes.
+   - The site was developed using [Gitpod](https://codeinstitute-ide.net/).
+   - [GitHub](https://github.com/) was used to store my repository.
+   - Responsive screenshot made using [Amiresponsive](https://amiresponsive.co.uk/)
+   - Database used [dbs](https://dbs.ci-dbs.net/)
+
+
+  - [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000) was used 
+  to generate color scheme.
+  - [W3cschool](https://www.w3schools.com/) was used to source the majority of the code used to create a timeline in CSS for the insights page. Minor styling adjustments were made and the HTML was adapted to include a Jinja for loop to display the relevant data without code repetition.
+  - [lucid.app](https://lucid.app/) was used to create Database Schema
+
+ - Fonts were taken from [Google Fonts](https://fonts.google.com/)
+
+ - [favicon.io](https://favicon.io/) was used to create favicon
+
+ - Bootstrap was used to enhance the styling and provide responsive, mobile-first design with pre-built CSS components.
+
   ### Content
   
-  * The Code to make the social media links was taken from the CI [ Love Runing ](https://akramalex.github.io/LOVE-RUNING/) project.
+  * The information regarding diets has been sourced from [Prevention.com](https://www.prevention.com/)
 
 ### Media
 
