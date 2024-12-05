@@ -140,7 +140,7 @@ for user search filters (e.g., based on health benefits, calorie count, etc.) ar
 
 4- Complex Community Features
 
-* Features such as discussion boards or community chat should be postponed to future phases. For now, commenting and liking are sufficient for user interaction.
+* Features such as discussion boards or community chats should be postponed to future phases. For now, commenting and liking are sufficient for user interaction.
 
 5- Interactive Diet Tools
 
@@ -148,7 +148,9 @@ for user search filters (e.g., based on health benefits, calorie count, etc.) ar
 
 ### Structure
 
-To help me visualize a typical user journey around the site, I used [lucid.app](https://lucid.app/) to help me plan out the various routes.
+
+To help visualize a typical user journey around the site, I used [lucid.app](https://lucid.app/) to plan out the various routes.
+
 
 ![](static/images/sc-d.jpeg)
 
@@ -227,9 +229,8 @@ They can be found below:
 
 ###  Database Design
 
+Entity Relationship Diagrams (ERDs) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project. To follow best practices, a database schema was created for the backend DB and tables, and mapped out before coding began using a free version of [Lucidchart](https://lucid.app/).
 
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
-To follow best practice, a database schema was created for the backend DB and tables, and mapped out before coding began using a free version of [Lucidchart](https://lucid.app/) .
 
 Below is the database structure:
 
@@ -240,7 +241,9 @@ Below is the database structure:
 
 #### Color Scheme: 
 
-I used the following Image to generate the following color scheme on [coolers](https://coolors.co/).co. The resultant color scheme was:
+
+I used the following image to generate the color scheme on [coolers](https://coolors.co/). The resultant color scheme is:
+
 
 ![](static/images/cs.jpg)
 
@@ -250,12 +253,12 @@ I used the following Image to generate the following color scheme on [coolers](h
 
  * Lato:
 
-     Used for: The brand name in the navbar and text in the hero section for a clean, modern look.
+     Used for: The brand name in the navbar and the text in the hero section, creating a clean, modern look
 .
 
 * Roboto:
 
-     Used for: Body text and general content to provide readability and clarity.
+     Used for: Body text and general content, providing readability and clarity.
 
 
 
@@ -278,19 +281,19 @@ The following features have been implemented:
 
 ### Navbar
 
-* Featured at the top of the page, the navigation shows the DietDive the left corner. For smaller devices. 
+* Featured at the top of the page, the navigation displays "DietDive" in the left corner. For smaller devices, the navigation converts to a burger menu. 
 
-* The other navigation links are: Home, About, Contact , Register,  and LogiLogout which link to different pages of the site.
+* The other navigation links are: Home, About, Contact, Register, and Login/Logout, each linking to different pages of the site.
 
-* The active page which the user is currently on is underlinedH.
+* The active page, which the user is currently on, is underlined.
 
-* When the user hovers over a link, the link is in bold.
+* When the user hovers over a link, the link appears in bold.
 
-* The navigation makes clear the name of the company and website.
+* The navigation clearly displays the name of the company and website.
 
 * The navigation makes the different sections of information easy to find.
 
-* On smaller devices the navigation converts to a burger menu
+* On smaller devices, the navigation converts to a burger menu.
 
 ![](static/images/nav.jpg)
 ![](static/images/nav-l.jpg)
@@ -298,20 +301,21 @@ The following features have been implemented:
 
 ### Homepage
 
-* The homepage consists of a large hero image. Here the user is welcomed to the blog and provided a short blub about the site.
+* The homepage consists of a large hero image, where the user is welcomed to the blog and provided with a short blurb about the site.
 
-* The 'learn about Diet Dive and our mission' button takes the user to the 'About' page.
 
-* below the hero section is all of the blog posts. The posts are displayed in 3 columns, with 6 posts per page.
 
-* Each post is in a bootstrap card, with the post's: dietname, title, author, excerpt, date created and feature image.
+* The "Learn about DietDive and our mission" button takes the user to the "About" page.
 
-* On smaller devices the layout changes to one column per post to maximise usable screen space.
+* Below the hero section are all the blog posts. The posts are displayed in 3 columns, with 6 posts per page.
 
-* The next button takes the user to the next 6 blog posts (pagination)
+* EEach post is in a Bootstrap card, containing the post's diet name, title, author, excerpt, date created, and featured image.
 
-* The user can click on the blog post's title/excerpt/image to take them to that post's post detail page. Here they can view the whole post.
+* On smaller devices, the layout changes to one column per post to maximize usable screen space.
 
+* The "Next" button takes the user to the next 6 blog posts (pagination).
+
+* The user can click on the blog post's title, excerpt, or image to be taken to that post's detail page, where they can view the full post.
        
 ![](static/images/home-2.jpg)
 ![](static/images/home-3.jpg)
@@ -321,13 +325,14 @@ The following features have been implemented:
 ### Blog
 
 
-* Each blog post can be clicked - bringing the user to the blog details page for that post.
+* Each blog post can be clicked, bringing the user to the blog details page for that post.
 
-* The header section contains the blog title, feature image, author and date the post was created.
+* The header section contains the blog title, featured image, author, and the date the post was created.
 
-* The blog post is rendered to the page for the user to read.
+* TThe blog post is rendered on the page for the user to read.
 
-* Below the post is a like button and a comment sections. These features are read-only for non-logged in users. Logged in users can like or comment on the post.
+
+* Below the post is a like button and a comment section. These features are read-only for non-logged-in users. Logged-in users can like or comment on the post.
 
 * For non-logged-in users, a login button is provided with a link that directs them to the sign-in/sign-up page, allowing them to comment and like posts once they are authenticated.
 
@@ -335,9 +340,11 @@ The following features have been implemented:
 
 * The number of likes and comments for that particular blog post is clearly visible.
 
-* Logged in users can write a comment using the comment form and submit it to the DB. It must be approved by an administrator in order to appear on the front end.
 
-* A logged in user can edit or delete their own comment. Editing a comment will resubmit the new comment to the DB for approval.
+
+* Logged-in users can write a comment using the comment form and submit it to the database. It must be approved by an administrator in order to appear on the front end.
+
+* A logged-in user can edit or delete their own comment. Editing a comment will resubmit the new comment to the database for approval.
 
 
 ![](static/images/blog-1.jpg)
@@ -352,11 +359,11 @@ The following features have been implemented:
 
 ### About page 
 
-* The About page is a simple page to inform site users all about DietDive.
+* The About page is a simple page that informs site users about DietDive.
 
-* It consists of about content, an image, and the date edited (from the about DB table).
+* It consists of the about content, an image, and the date edited (from the About DB table).
 
-* The contents of the about page can be edited with a UI from the admin area.
+* The contents of the About page can be edited via a UI in the admin area.
 
 ![](static/images/about-1.jpg)
 ![](static/images/about-2.jpg)
@@ -364,15 +371,15 @@ The following features have been implemented:
 
 ### Contact Page
 
-* The Contact page consists of a form a user can use to get in touch with DietDive.
+* The Contact page consists of a form that users can use to get in touch with DietDive.
 
-* Front end validation code ensures users must fill out all fields in order to submit the contact form.
+* Front-end validation code ensures users must fill out all fields in order to submit the contact form.
 
-* Once the user submits a message, they are shown a confirmation message stating: 'Thank you! Your message has been submitted successfully. We will get back to you shortly.' Below the message, a button is provided to redirect users back to the homepage.
+* Once the user submits a message, they are shown a confirmation message stating: "Thank you! Your message has been submitted successfully. We will get back to you shortly." Below the message, a button is provided to redirect users back to the homepage.
 
 
 
-* I also ensured that any required elements removed from the front-end trigger an error message stating, "there was an error . Please try again."
+* I also ensured that any required elements removed from the front-end trigger an error message stating, "There was an error. Please try again."
 
 ![](static/images/c1.jpg)
 
@@ -388,22 +395,21 @@ The following features have been implemented:
 
 * Users can register for an account by filling out the registration form.
 
-* This form is validated on the front end so that users must submit required 
-  information.
+* This form is validated on the front end to ensure users submit the required information.
 
-* Passwords rules apply:
+* Password rules apply:
   - Your password can’t be too similar to your other personal information.
   - Your password must contain at least 8 characters.
   - Your password can’t be a commonly used password.
   - Your password can’t be entirely numeric.
-  - The password must be entered twice and the 2 passwords must match.
+  - The password must be entered twice, and the two passwords must match.
 
 
-* Clicking the sign up button will create a new user and the user can then sign in and use the user functionality on the website.
+* Clicking the sign-up button will create a new user, and the user can then sign in and use the user functionality on the website.
 
-* Users can login from the login page. They must enter the correct username and password.
+* Users can log in from the login page by entering the correct username and password.
 
-* User can easily log out by clicking the logout button in the navigation bar.
+* Users can easily log out by clicking the logout button in the navigation bar.
 
 
 ![](static/images/reg1.jpg)
@@ -418,7 +424,7 @@ The following features have been implemented:
 
 
 ### Footer
-* The footer is simple with a navigation menu and social links.
+* The footer is simple, featuring a navigation menu and social links.
 
 ![](static/images/footer.jpg)
 
@@ -433,9 +439,9 @@ The following features have been implemented:
 
    - Ability to post blogs.
    - Option to save blogs to a favorites list.
-   - Ability to update profile image.
+   - Ability to update the "profile image".
 
-* sign up 
+* Sign Up 
 
   - Email verification upon registration for security.
   
@@ -446,8 +452,14 @@ The following features have been implemented:
 
 [GitHub Projects](https://github.com/users/akramalex/projects/11) served as an 
 Agile tool for this project.
-
-
+ ### Summary:
+  - EPIC 1: User interactions with posts (viewing and interacting)
+  - EPIC 2: Commenting and liking posts
+  - EPIC 3: Content management (backend tasks like managing posts and comments)
+  - EPIC 4: About page management (updating and displaying site information)-  
+  - EPIC 5: Contact and communication (handling user-submitted contact forms)
+ ####  Milestones and Sprints
+In this project, milestones are used solely to track the completion and progress of sprints. Each sprint has a predefined set of user stories or tasks to be completed within the sprint period. The milestone is used to mark the completion of each sprint, ensuring that all objectives for that sprint are met.
  - The dietDive project was managed from the beginning using GitHub Projects (View Project Here), in order to ensure an agile approach.
 
  - The project goals were broken into Epics, each further divided into User Stories.
@@ -503,7 +515,7 @@ I've decomposed my Epics into stories prior to prioritizing and implementing the
 * Font awesome
   - All icons throughout the page.
 
-* favicon
+* Favicon
 
    - The favicon is used to enhance the branding and user experience by providing a recognizable icon in the browser tab, making it easier for users to identify the website when multiple tabs are open.
 
@@ -513,7 +525,6 @@ I've decomposed my Epics into stories prior to prioritizing and implementing the
 
 
 ## Testing 
-
 I have included testing details during and post-development in a separate document called [TESTING.md](https://github.com/akramalex/DietDive/blob/main/TESTING.md).
 
 
@@ -525,28 +536,26 @@ I have included testing details during and post-development in a separate docume
 
 
 
-The live deployed application can be found deployed on [Heroku](https://id.heroku.com/login).
+The live deployed application can be found at [Heroku](https://id.heroku.com/login).
 
 
  ### dbs Database
 
-This project uses [dbs](https://dbs.ci-dbs.net/)  for the PostgreSQL Database.
+This project uses [dbs](https://dbs.ci-dbs.net/) for the PostgreSQL Database.
 
 1: Provide  Email Address#
 2: Create  PostgreSQL Database
-
 3: Get the Database URL
 
 ### Cloudinary API
-This project uses the [Cloudinary API](https://console.cloudinary.com/settings/c-54e56b1299a77e8b55f6dcb16bacf1/api-keys) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+This project uses the [Cloudinary API](https://console.cloudinary.com/settings/c-54e56b1299a77e8b55f6dcb16bacf1/api-keys) to store media assets online, as Heroku does not persist this type of data.
 
 To obtain your own Cloudinary API key, create an account and log in.
 
-  - For Primary interest, you can choose Programmable Media for image and video API.
- - -Optional: edit your assigned cloud name to something more memorable.
- - On your Cloudinary Dashboard, you can copy your API Environment Variable.
- - Be sure to remove the CLOUDINARY_URL= as part of the API value; this is the key.
-
+  - For primary interest, you can choose Programmable Media for the image and video API.
+ - Optional: Edit your assigned cloud name to something more memorable.
+ - On your Cloudinary dashboard, you can copy your API Environment Variable.
+ - Be sure to remove the CLOUDINARY_URL= part from the API value, as that is the key.
  ###  Heroku Deployment
 
 This project uses [Heroku](https://id.heroku.com/login)
@@ -632,38 +641,54 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 
  
 
+*
+*  Navigate to the [GitHub repository](https://github.com/akramalex/DietDive)
+
+ 
+
 * Open Gitpod
  
-    In the GitHub repository, click on the green Gitpod button, or use the following link to open the repository in Gitpod directly:
+    In the GitHub repository, click on the green Gitpod button, or use the following link to open the repository directly in Gitpod:
 
 
 https://gitpod.io/#https://github.com/akramalex/DietDive
 
 * Set Up the Gitpod Workspace
 
-  Gitpod will automatically set up a workspace for you, which includes cloning the repository and installing the necessary dependencies.
+  Gitpod will automatically set up the workspace for you, which includes cloning the repository and installing the necessary dependencies.
 
 * Install Required Dependencies
+
   In Gitpod, open the terminal and run the following command to install the required Python dependencies:
 
 pip install -r requirements.txt
 
 
 * Configure the Database
-  -  In Gitpod, you can either connect to a local database or use an external PostgreSQL database. Follow the provided instructions to configure the database.
+
+  -  In Gitpod, you can either connect to a local database or use an external PostgreSQL database. Follow the provided instructions to configure the database accordingly.
 
 * Run Migrations
-  - After setting up the database, run the following command to apply the database migrations and create the necessary tables:
+  - AAfter setting up the database, run the following command to apply the database migrations and create the necessary tables:
 
     python manage.py migrate
-* Run the Development Server
-  - You can now run the Django development server in Gitpod by executing the following command:
 
+
+* Run the Development Server
+
+
+  - You can now start the Django development server in Gitpod by executing the following command:
 
 python manage.py runserver
+
+
 Access the Application
-Gitpod will provide a publicly accessible URL to view your application in the cloud. After starting the server, the URL will look like this:
+Gitpod will provide a publicly accessible URL for viewing your application in the cloud. After starting the server, the URL will appear like this:
 [DietDive](https://8000-akramalex-dietdive-9xwmeslqna3.ws.codeinstitute-ide.net)
+
+
+
+
 
 
 
@@ -676,27 +701,27 @@ Gitpod will provide a publicly accessible URL to view your application in the cl
    - [Balsamiq](https://balsamiq.cloud/) was used to create the wireframes.
    - The site was developed using [Gitpod](https://codeinstitute-ide.net/).
    - [GitHub](https://github.com/) was used to store my repository.
-   - Responsive screenshot made using [Amiresponsive](https://amiresponsive.co.uk/)
-   - Database used [dbs](https://dbs.ci-dbs.net/)
+   - Responsive screenshot made using [Amiresponsive](https://amiresponsive.co.uk/).
+   - Database used [dbs](https://dbs.ci-dbs.net/).
 
 
-  - [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000) was used 
-  to generate color scheme.
-  - [W3cschool](https://www.w3schools.com/) was used to source the majority of the code used to create a timeline in CSS for the insights page. Minor styling adjustments were made and the HTML was adapted to include a Jinja for loop to display the relevant data without code repetition.
-  - [lucid.app](https://lucid.app/) was used to create Database Schema
+  - [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000) was used to generate color scheme.
+  - [W3cschools](https://www.w3schools.com/) was used to source the majority of the code used to create a timeline in CSS for the insights page. Minor styling adjustments were made and the HTML was adapted to include a Jinja for loop to display the relevant data without code repetition.
 
- - Fonts were taken from [Google Fonts](https://fonts.google.com/)
+  - [lucid.app](https://lucid.app/) was used to create Database Schema.
 
- - [favicon.io](https://favicon.io/) was used to create favicon
+ - Fonts were taken from [Google Fonts](https://fonts.google.com/).
+
+ - [favicon.io](https://favicon.io/) was used to create favicon.
 
  - Bootstrap was used to enhance the styling and provide responsive, mobile-first design with pre-built CSS components.
 
   ### Content
   
-  * The information regarding diets has been sourced from [Prevention.com](https://www.prevention.com/)
+  * The information about diets has been sourced from [Prevention.com](https://www.prevention.com/)
 
 ### Media
 
-* The image in the header was taken from [ Pexels ](https://www.pexels.com/)
+* The images were sourced from [ Pexels ](https://www.pexels.com/)
 
 
